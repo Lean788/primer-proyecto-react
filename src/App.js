@@ -2,7 +2,7 @@ import './App.css';
 import React,{useState} from 'react';
 // import Person from './components/Person';
 // import Counter from './components/Counter';
-import Counter_kata from './components/Counter_kata';
+import Counter from './components/Counter_kata2';
 // const Saluda =  props => {
 //   console.log(props);
 //   return <h3>Hola {props.name} </h3>
@@ -26,8 +26,8 @@ function App() {
     <div className="App">
       <header className="App-header">
           {showCounters && <React.Fragment>
-            <Counter_kata initialValue={0} step={2}/>
-            <Counter_kata initialValue={10} step={5}/>
+            <Counter initialValue={0} step={2}/>
+            <Counter initialValue={10} step={5}/>
           </React.Fragment>
            }
           <button onClick={quitarCounters}>Quitar counter</button>
