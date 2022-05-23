@@ -7,14 +7,20 @@ class Counter_kata extends Component {
             counter:this.props.initialValue
         }
     }
+    componentDidMount(){
+        console.log("el counter se ha montado");
+    };
+    componentDidUpdate(prevProps, prevState){
+        console.log("el counter vale "+this.state.counter, prevState.counter);
+    };
     increment = () => {
         this.setState({counter:this.state.counter + this.props.step})
-    }
+    };
     decrement = () => {
         if(this.state.counter>0){
             this.setState({counter:this.state.counter - this.props.step})
         }
-    }
+    };  
     render(){
         return (<div>
             <button onClick={this.increment}>+</button>

@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 // import Person from './components/Person';
 // import Counter from './components/Counter';
-import Counter_kata2 from './components/Counter_kata2';
+import Counter_kata from './components/Counter_kata';
 // const Saluda =  props => {
 //   console.log(props);
 //   return <h3>Hola {props.name} </h3>
@@ -24,8 +24,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <Counter_kata2 initialValue={0} step={2}/>
-          <Counter_kata2 initialValue={10} step={5}/>
+          <Counter_kata initialValue={0} step={2}/>
+          <Counter_kata initialValue={10} step={5}/>
         
       </header>
     </div>
