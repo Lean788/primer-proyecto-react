@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React,{useState} from 'react';
 // import Person from './components/Person';
 // import Counter from './components/Counter';
 import Counter_kata from './components/Counter_kata';
@@ -20,13 +20,17 @@ import Counter_kata from './components/Counter_kata';
 
 
 function App() {
-  // const hola = <h2>Hola mundo React</h2>;
+  const [showCounters, setShowCounters] = useState(true);
+  const quitarCounters = () => setShowCounters(false);  
   return (
     <div className="App">
       <header className="App-header">
-          <Counter_kata initialValue={0} step={2}/>
-          <Counter_kata initialValue={10} step={5}/>
-        
+          {showCounters && <React.Fragment>
+            <Counter_kata initialValue={0} step={2}/>
+            <Counter_kata initialValue={10} step={5}/>
+          </React.Fragment>
+           }
+          <button onClick={quitarCounters}>Quitar counter</button>
       </header>
     </div>
   );
