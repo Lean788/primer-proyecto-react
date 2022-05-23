@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Person from './components/Person';
+import Counter from './components/Counter';
 // const Saluda =  props => {
 //   console.log(props);
 //   return <h3>Hola {props.name} </h3>
@@ -23,9 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Person name="David" surname="Pinilla" age={27} />        
-        <Person name="Juan" surname="Perez" age={127} />        
-        <Person name="David" surname="Ochando" age={97} />        
+          <Counter />
         
       </header>
     </div>
