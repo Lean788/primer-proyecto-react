@@ -1,8 +1,9 @@
 import './App.css';
-import React,{useState} from 'react';
+import React from 'react';
+import UserForm from './components/userForm/UserForm.jsx';
 // import Person from './components/Person';
 // import Counter from './components/Counter';
-import Counter from './components/Counter_kata2';
+// import Counter from './components/Counter_kata2';
 // const Saluda =  props => {
 //   console.log(props);
 //   return <h3>Hola {props.name} </h3>
@@ -19,18 +20,11 @@ import Counter from './components/Counter_kata2';
 // };
 
 
-function App() {
-  const [showCounters, setShowCounters] = useState(true);
-  const quitarCounters = () => setShowCounters(false);  
+function App() { 
   return (
     <div className="App">
       <header className="App-header">
-          {showCounters && <React.Fragment>
-            <Counter initialValue={0} step={2}/>
-            <Counter initialValue={10} step={5}/>
-          </React.Fragment>
-           }
-          <button onClick={quitarCounters}>Quitar counter</button>
+          <UserForm/>
       </header>
     </div>
   );
