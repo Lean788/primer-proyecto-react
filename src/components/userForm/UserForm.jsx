@@ -1,9 +1,10 @@
 import React from 'react';
-import './UserForm.scss'
+import './UserForm.css'
 class UserForm extends React.Component{
     constructor(props){
         super(props);
         this.state={email: '', genero: ''}
+
     }
     handleChange = event => {
         this.setState({[event.target.name]:event.target.value})
