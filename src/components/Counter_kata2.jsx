@@ -1,20 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-const Counter = props => {
+const Counter_kata2 = props => {
     const [counter, setCounter] = useState(props.initialValue);
-    useEffect(()=>{
-        console.log("el counter se ha montado");
-        return ()=>{
-            console.log("el counter se ha desmontado")
-        }
-    },[])
-    useEffect(()=>{
-        console.log("el componente se ha actualizado");
-        if(counter<50){
-            setCounter(counter + props.step)
-        }
-    }, [counter, props.step]);
-    
     const increment = () => {
         setCounter(counter + props.step);
     }
@@ -24,13 +11,14 @@ const Counter = props => {
         }
     }
     
-    return (<div className='counter'>
-        <button onClick={increment}>+</button>
-        <span>{counter}</span>
-        <button onClick={decrement}>-</button>
-    </div>
-    ) 
+        return <div>
+            <button onClick={increment}>+</button>
+            <span>{counter}</span>
+            <button onClick={decrement}>-</button>
+
+        </div>
+        
     
 }
 
-export default Counter;
+export default Counter_kata2;
